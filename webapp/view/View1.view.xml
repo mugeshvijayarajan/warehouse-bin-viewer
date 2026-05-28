@@ -1,0 +1,57 @@
+<mvc:View
+    controllerName="project1.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    displayBlock="true">
+
+    <Page title="🏭 Warehouse Bin Viewer" class="sapUiResponsiveContentPadding">
+        <content>
+
+            <!-- HEADER BANNER -->
+            <VBox class="headerBanner">
+                <Title text="Material List" level="H2" class="headerTitle"/>
+                <Text text="Tap a material row to view its warehouse bin details" class="headerSubtitle"/>
+            </VBox>
+
+            <!-- MATERIAL LIST -->
+            <List
+                id="materialList"
+                items="{/materials}"
+                mode="None"
+                class="materialList">
+                <items>
+                    <ObjectListItem
+                        title="{Material} - {Description}"
+                        type="Active"
+                        press="onMaterialPress"
+                        class="materialListItem">
+                        <attributes>
+                            <ObjectAttribute text="🏭 Plant: {Plant}"/>
+                            <ObjectAttribute text="📦 Bin: {Bin}"/>
+                        </attributes>
+                    </ObjectListItem>
+                </items>
+            </List>
+
+            <!-- DETAIL CARD -->
+            <VBox id="detailCard" visible="false" class="detailCard">
+                <VBox class="detailCardHeader">
+                    <Title text="📦 Bin Detail" level="H2" class="detailTitle"/>
+                </VBox>
+                <ObjectHeader
+                    title="{detail>/Material}"
+                    class="detailObjectHeader">
+                    <attributes>
+                        <ObjectAttribute title="📝 Description" text="{detail>/Description}"/>
+                        <ObjectAttribute title="🏭 Plant Code" text="{detail>/Plant}"/>
+                        <ObjectAttribute title="🔖 Batch Number" text="{detail>/Batch}"/>
+                        <ObjectAttribute title="📍 Bin Location" text="{detail>/Bin}"/>
+                    </attributes>
+                </ObjectHeader>
+            </VBox>
+
+        </content>
+    </Page>
+
+</mvc:View>
