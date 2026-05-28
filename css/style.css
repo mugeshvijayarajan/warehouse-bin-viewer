@@ -1,0 +1,77 @@
+/* ===== HEADER BANNER ===== */
+.headerBanner {
+    background: linear-gradient(135deg, #0a6ed1, #074f9e);
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 4px 12px rgba(10, 110, 209, 0.3);
+}
+
+.headerTitle {
+    color: #ffffff !important;
+    font-size: 1.4rem !important;
+    font-weight: 700 !important;
+}
+
+.headerSubtitle {
+    color: #cce0f5 !important;
+    font-size: 0.85rem !important;
+    margin-top: 4px !important;
+}
+
+/* ===== MATERIAL LIST ===== */
+.materialList {
+    margin: 0 16px 16px 16px !important;
+    border-radius: 12px !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08) !important;
+    overflow: hidden !important;
+    border: 1px solid #e5e5e5 !important;
+}
+
+.materialListItem {
+    transition: background 0.2s ease !important;
+    border-left: 4px solid transparent !important;
+}
+
+.materialListItem:hover {
+    background: #f0f7ff !important;
+    border-left: 4px solid #0a6ed1 !important;
+}
+
+/* ===== DETAIL CARD ===== */
+.detailCard {
+    margin: 0 16px 24px 16px !important;
+    border-radius: 12px !important;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12) !important;
+    overflow: hidden !important;
+    border: 1px solid #d1e8ff !important;
+    animation: slideDown 0.3s ease !important;
+}
+
+.detailCardHeader {
+    background: linear-gradient(135deg, #e8f4ff, #d1e8ff) !important;
+    padding: 14px 20px !important;
+    border-bottom: 1px solid #b8d9f5 !important;
+}
+
+.detailTitle {
+    color: #0a6ed1 !important;
+    font-weight: 700 !important;
+}
+
+.detailObjectHeader {
+    padding: 16px !important;
+    background: #ffffff !important;
+}
+
+/* ===== SLIDE DOWN ANIMATION ===== */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
