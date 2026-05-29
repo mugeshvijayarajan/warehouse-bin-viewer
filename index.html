@@ -1,24 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Warehouse Bin Viewer</title>
-    <script id="sap-ui-bootstrap"
-        src="https://ui5.sap.com/resources/sap-ui-core.js"
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>App Title</title>
+    <style>
+        html, body, body > div, #container, #container-uiarea {
+            height: 100%;
+        }
+    </style>
+    <script
+        id="sap-ui-bootstrap"
+        src="resources/sap-ui-core.js"
         data-sap-ui-theme="sap_horizon"
-        data-sap-ui-libs="sap.m"
-        data-sap-ui-compatVersion="edge"
+        data-sap-ui-resource-roots='{
+            "project1": "./"
+        }'
+        data-sap-ui-on-init="module:sap/ui/core/ComponentSupport"
+        data-sap-ui-compat-version="edge"
         data-sap-ui-async="true"
-        data-sap-ui-resourceroots='{"project1": "./"}'
-        data-sap-ui-oninit="module:sap/ui/core/ComponentSupport">
-    </script>
+        data-sap-ui-frame-options="trusted"
+    ></script>
 </head>
-<body class="sapUiBody">
-    <div data-sap-ui-component
+<body class="sapUiBody sapUiSizeCompact" id="content">
+    <div
+        data-sap-ui-component
         data-name="project1"
         data-id="container"
-        data-settings='{"id":"project1"}'>
-    </div>
+        data-settings='{"id" : "project1"}'
+        data-handle-validation="true"
+    ></div>
 </body>
 </html>
