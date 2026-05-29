@@ -14,12 +14,20 @@
                 <Text text="Tap a material row to view its warehouse bin details" class="headerSubtitle"/>
             </VBox>
 
+            <!-- SEARCH BAR -->
+            <SearchField
+                id="searchField"
+                placeholder="Search by Material ID or Description..."
+                liveChange="onSearch"
+                class="searchBar"/>
+
             <!-- MATERIAL LIST -->
             <List
                 id="materialList"
                 items="{/materials}"
                 mode="None"
-                class="materialList">
+                class="materialList"
+                noDataText="No materials found">
                 <items>
                     <ObjectListItem
                         title="{Material} - {Description}"

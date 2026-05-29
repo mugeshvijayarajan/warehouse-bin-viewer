@@ -75,3 +75,9 @@
         transform: translateY(0);
     }
 }
+
+/* ===== SEARCH BAR ===== */
+.searchBar {
+    margin: 0 16px 16px 16px !important;
+    border-radius: 8px !important;
+}
